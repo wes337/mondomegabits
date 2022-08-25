@@ -1,0 +1,13 @@
+@import "./fonts.scss";
+@import "./variables.scss";
+
+html,
+body {
+  background-color: $colorBlack;
+}
+
+body {
+  margin: 0;
+  color: $colorWhite;
+  font-family: $bodyFont;
+}

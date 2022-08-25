@@ -1,0 +1,28 @@
+@import "../../variables.scss";
+
+.body {
+  padding: 20px 35px;
+  border-radius: 10px;
+  background-color: $colorRed;
+  background-image: $noise;
+  box-shadow: inset 0 0 75px $colorRed;
+}
+
+.body-text {
+  background-color: $colorBlack;
+  background-image: $noise;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px 25px $colorBlack;
+
+  p {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .body {
+    grid-row: 2;
+    grid-column: span 1;
+  }
+}

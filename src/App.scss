@@ -1,0 +1,16 @@
+@import "./text.scss";
+@import "./separators.scss";
+@import "./misc.scss";
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem;
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+}

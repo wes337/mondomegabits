@@ -1,0 +1,20 @@
+@import "../../variables.scss";
+
+.input {
+  position: relative;
+  z-index: 1;
+  min-height: 25vh;
+
+  textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .input {
+    grid-row: 1;
+    grid-column: span 1;
+  }
+}

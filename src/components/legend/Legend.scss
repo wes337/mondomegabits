@@ -1,0 +1,22 @@
+@import "../../variables.scss";
+
+.legend {
+  display: flex;
+  width: 100%;
+  grid-column: span 2;
+
+  div {
+    width: 100%;
+  }
+
+  fieldset {
+    border: 1px solid $colorRed;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .legend {
+    grid-row: 3;
+    grid-column: span 1;
+  }
+}

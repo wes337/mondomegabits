@@ -1,0 +1,18 @@
+@import "./variables.scss";
+
+// Terminal lines effect
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba($colorBlack, 0.15),
+    rgba($colorBlack, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
