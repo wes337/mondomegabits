@@ -1,6 +1,6 @@
 {
   "name": "mondomegabits-maker",
-  "homepage": "https://wes337.github.io/mondomegabits/",
+  "homepage": "http://wes337.github.io/mondomegabits/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
