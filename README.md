@@ -4,14 +4,6 @@
 
 ## To do
 
-- Allow changing frame color
-- More text effects
-
-  - Underline
-  - ╔┌Whatever this is╗┐
-  - Changing color
-  -
-
 - More list styles
 
   - ♥ / ♡

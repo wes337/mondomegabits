@@ -1,10 +1,3 @@
-import create from "zustand";
-
-export const useHtmlStore = create((set) => ({
-  html: "",
-  setHtml: (html) => set({ html }),
-}));
-
 const textSymbols = [
   {
     open: "##",
@@ -31,9 +24,21 @@ const textSymbols = [
     htmlClose: "</span>",
   },
   {
+    open: "$$",
+    close: "$$",
+    htmlOpen: '<span class="color-change">',
+    htmlClose: "</span>",
+  },
+  {
     open: "**",
     close: "**",
     htmlOpen: '<span class="italic">',
+    htmlClose: "</span>",
+  },
+  {
+    open: "__",
+    close: "__",
+    htmlOpen: '<span class="underline">',
     htmlClose: "</span>",
   },
   {
@@ -46,6 +51,12 @@ const textSymbols = [
     open: "<<",
     close: ">>",
     htmlOpen: '<span class="double-arrow">',
+    htmlClose: "</span>",
+  },
+  {
+    open: "//",
+    close: "//",
+    htmlOpen: '<span class="bracket">',
     htmlClose: "</span>",
   },
   {
@@ -132,7 +143,7 @@ export const textToHtml = (text) => {
   });
 
   // Paragraphs
-  html = html.replace(/(.+)((\r?\n.+)*)/gm, (match) => {
+  html = html.replace(/^(?![#>\-*\d ])((?![#>\-*\d ]).+\n?)+/gm, (match) => {
     if (match.trim().startsWith("<hr")) {
       return match;
     }

@@ -1,14 +1,52 @@
 @import "../../variables.scss";
 
+@mixin borderColor($color) {
+  background-color: $color;
+  box-shadow: inset 0 0 75px $color;
+}
+
 .body {
-  padding: 20px 35px;
+  display: flex;
+  padding: 35px;
   border-radius: 10px;
-  background-color: $colorRed;
   background-image: $noise;
-  box-shadow: inset 0 0 75px $colorRed;
+  animation: 0.15s linear infinite alternate noise;
+
+  &.red {
+    @include borderColor($colorRed);
+  }
+
+  &.green {
+    @include borderColor($colorGreen);
+  }
+
+  &.yellow {
+    @include borderColor($colorYellow);
+  }
+
+  &.blue {
+    @include borderColor($colorBlue);
+  }
+
+  &.orange {
+    @include borderColor($colorOrange);
+  }
+
+  &.teal {
+    @include borderColor($colorTeal);
+  }
+
+  &.purple {
+    @include borderColor($colorPurple);
+  }
+
+  &.pink {
+    @include borderColor($colorPink);
+  }
 }
 
 .body-text {
+  flex-grow: 1;
   background-color: $colorBlack;
   background-image: $noise;
   border-radius: 5px;
@@ -17,6 +55,10 @@
   p {
     position: relative;
     z-index: 1;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 

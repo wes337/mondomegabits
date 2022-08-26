@@ -6,12 +6,17 @@
   text-shadow: 0 0 25px rgba($color, 0.75);
 }
 
-p {
-  @include textColorAndShadow($colorGreen);
+@mixin defaultTextSizing() {
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 0.5px;
   line-height: 20px;
+}
+
+p {
+  @include textColorAndShadow($colorGreen);
+  @include defaultTextSizing();
+
   margin-left: 20px;
   text-indent: -20px;
 }
@@ -38,6 +43,22 @@ p {
   @include textColorAndShadow($colorPurple);
 }
 
+.pink {
+  @include textColorAndShadow($colorPink);
+}
+
+.teal {
+  @include textColorAndShadow($colorTeal);
+}
+
+.orange {
+  @include textColorAndShadow($colorOrange);
+}
+
+.blue {
+  @include textColorAndShadow($colorBlue);
+}
+
 .glow {
   @include textColorAndShadow($colorTeal);
   letter-spacing: 2.5px;
@@ -55,12 +76,21 @@ p {
   animation: 1s linear infinite alternate backgroundPosition;
 }
 
+.color-change {
+  animation: colorChange 5s alternate infinite;
+}
+
 .italic {
   font-style: italic;
 }
 
 .wide {
   letter-spacing: 10px;
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 .double-arrow {
@@ -91,10 +121,27 @@ p {
   }
 }
 
+.bracket {
+  &::before,
+  &::after {
+    font-family: $systemFont;
+  }
+
+  &::before {
+    content: "『";
+  }
+
+  &::after {
+    content: "』";
+  }
+}
+
 ul {
   list-style: none;
   margin: 5px 0;
   padding-left: 20px;
+  @include textColorAndShadow($colorGreen);
+  @include defaultTextSizing();
 
   li {
     margin: 5px 0;

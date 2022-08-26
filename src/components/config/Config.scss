@@ -1,0 +1,50 @@
+@import "../../variables.scss";
+
+.config {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+
+  .border-color-button {
+    border: none;
+    margin: 0px 2px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: currentColor;
+    border: 2px solid currentColor;
+
+    &.yellow {
+      color: $colorYellow;
+    }
+
+    &.red {
+      color: $colorRed;
+    }
+
+    &.purple {
+      color: $colorPurple;
+    }
+
+    &.pink {
+      color: $colorPink;
+    }
+
+    &.teal {
+      color: $colorTeal;
+    }
+
+    &.orange {
+      color: $colorOrange;
+    }
+
+    &.blue {
+      color: $colorBlue;
+    }
+
+    &.current {
+      border: 2px solid $colorBlack;
+      outline: 2px solid rgba($colorWhite, 0.5);
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
-import { textToHtml, useHtmlStore } from "../../html";
+import { textToHtml } from "../../html";
+import { useStore } from "../../store";
 import "./Input.scss";
 
 const defaultValue = `## ** "They eat magnets." ** ##\n
@@ -16,7 +17,7 @@ A metallic tennis-ball-sized sphere containing a swarm of ## "nanites" ## that b
 
 const Input = () => {
   const [value, setValue] = useState(defaultValue);
-  const setHtml = useHtmlStore(({ setHtml }) => setHtml);
+  const setHtml = useStore(({ setHtml }) => setHtml);
 
   const updateHtml = useCallback(() => {
     const html = textToHtml(value);

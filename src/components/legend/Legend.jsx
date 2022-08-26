@@ -25,13 +25,22 @@ const Legend = () => {
             ++ <span className="glow">Glowing</span> ++
           </div>
           <div>
+            $$ <span className="color-change">Changing</span> $$
+          </div>
+          <div>
             ** <span className="italic">Italic</span> **
+          </div>
+          <div>
+            __ <span className="underline">Underline</span> __
           </div>
           <div>
             -&gt; <span className="arrow">Arrow</span> &lt;-
           </div>
           <div>
             &lt;&lt; <span className="double-arrow">Double arrow</span> &gt;&gt;
+          </div>
+          <div>
+            &#47;&#47; <span className="bracket">Brackets</span> &#47;&#47;
           </div>
           <div>
             (( <span className="wide">Wide</span> ))
