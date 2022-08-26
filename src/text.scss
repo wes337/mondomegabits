@@ -81,10 +81,12 @@ p {
 
 .arrow {
   &::before {
+    font-family: $systemFont;
     content: "🡆";
   }
 
   &::after {
+    font-family: $systemFont;
     content: "🡄";
   }
 }
