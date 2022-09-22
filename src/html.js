@@ -1,4 +1,4 @@
-const textSymbols = [
+export const textSymbols = [
   {
     open: "##",
     close: "##",
@@ -36,6 +36,12 @@ const textSymbols = [
     htmlClose: "</span>",
   },
   {
+    open: ":*",
+    close: "*:",
+    htmlOpen: '<sup class="italic-alt">',
+    htmlClose: "</sup>",
+  },
+  {
     open: "__",
     close: "__",
     htmlOpen: '<span class="underline">',
@@ -69,6 +75,7 @@ const textSymbols = [
 
 const lineSymbols = {
   "---": '<hr class="dotted" />',
+  "-o-": '<hr class="dotted-circles" />',
   "===": '<hr class="dotted-double" />',
   "|||": '<hr class="tall" />',
   "|--|": '<hr class="top" />',

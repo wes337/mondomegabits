@@ -31,6 +31,9 @@ const Legend = () => {
             ** <span className="italic">Italic</span> **
           </div>
           <div>
+            :* <span className="italic-alt">Italic Alt</span> *:
+          </div>
+          <div>
             __ <span className="underline">Underline</span> __
           </div>
           <div>
@@ -60,6 +63,10 @@ const Legend = () => {
           <div>
             === <span className="italic">(Double dotted line)</span>{" "}
             <hr className="dotted-double" />
+          </div>
+          <div>
+            -o- <span className="dotted-circles">(Dotted circles line)</span>{" "}
+            <hr className="dotted-circles" />
           </div>
           <div>
             ||| <span className="italic">(Tall dotted line)</span>{" "}

@@ -73,7 +73,7 @@ p {
   background-clip: text;
   -webkit-text-stroke: 2px transparent;
 
-  animation: 1s linear infinite alternate backgroundPosition;
+  animation: 5s linear infinite alternate backgroundPosition;
 }
 
 .color-change {
@@ -84,8 +84,22 @@ p {
   font-style: italic;
 }
 
+.italic-alt {
+  font-style: italic;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  font-size-adjust: 0.5;
+  letter-spacing: 0;
+}
+
+.number-circle {
+  font-size-adjust: 0.6;
+  letter-spacing: 0;
+}
+
 .wide {
   letter-spacing: 10px;
+  margin-right: -10px;
 }
 
 .underline {
@@ -112,12 +126,12 @@ p {
 .arrow {
   &::before {
     font-family: $systemFont;
-    content: "🡆";
+    content: "→";
   }
 
   &::after {
     font-family: $systemFont;
-    content: "🡄";
+    content: "←";
   }
 }
 

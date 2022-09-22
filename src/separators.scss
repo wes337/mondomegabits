@@ -45,6 +45,37 @@ hr {
     width: 100%;
   }
 
+  &.dotted-circles {
+    position: relative;
+    border: 0;
+    height: 2px;
+    color: $colorRed;
+    background-image: linear-gradient(
+      to right,
+      currentColor,
+      currentColor 30%,
+      transparent 30%,
+      transparent 100%
+    );
+    background-size: 10px 100%;
+    width: 100%;
+    overflow: visible;
+
+    &:before {
+      font-family: $systemFont;
+      position: absolute;
+      color: $colorRed;
+      content: "· • • ● • • ·";
+      width: 100%;
+      z-index: 1;
+      top: -12px;
+      left: 0;
+      text-align-last: justify;
+      -webkit-text-stroke: 4px $colorRed;
+      text-stroke: 4px $colorRed;
+    }
+  }
+
   &.tall {
     border: 0;
     height: 16px;
